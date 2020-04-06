@@ -1,4 +1,4 @@
-﻿# Getting the latest top 10 EventLogs for Source named CloudFlare from Application
+﻿# Getting the  EventLogs for Source named Application Error from Application folder
 $CFLog = Get-EventLog -LogName Application -Source "Application Error" 
 $CFLog | Select-Object -Property *
 
@@ -38,7 +38,7 @@ $myXlSheet.columns.item("A:J").EntireColumn.AutoFit() | out-null
 
 $Excel.DisplayAlerts = 'True'
 $ext=".xlsx"
-$path="D:\Logs\CloudFlareLogs$ext"
+$path="D:\Logs\EventLogs$ext"
 $myXlSheet.SaveAs($path) 
 $myXlSheet.Close
 $Excel.DisplayAlerts = 'True'
